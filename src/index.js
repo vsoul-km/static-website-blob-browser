@@ -96,6 +96,17 @@ class App extends React.Component {
                 }),
                 state.sorted.map(d => (d.desc ? "desc" : "asc"))
               );
+            
+            // Add code to remove the project file in the index.html, need to change name in build folder
+            for (var i =0; i < sortedData.length; i++ ) {
+              if (sortedData[i].name == "asset-manifest.json") sortedData.splice(i, 1);
+              if (sortedData[i].name == "favicon.ico") sortedData.splice(i, 1);
+              if (sortedData[i].name == "index.html") sortedData.splice(i, 1);
+              if (sortedData[i].name == "manifest.json") sortedData.splice(i, 1);
+              if (sortedData[i].name == "precache-manifest.js") sortedData.splice(i, 1);
+              if (sortedData[i].name == "service-worker.js") sortedData.splice(i, 1);
+              if (sortedData[i].name == "static/") sortedData.splice(i, 1);               
+            }
 
             // Store the state
             this.setState({
@@ -110,16 +121,16 @@ class App extends React.Component {
 
     // Custom links for various scenarios (handles blobs, directories and go back link)
     renderLink(blobName) {
-        var link;
+        var link = "https://mscssstatic.blob.core.windows.net/staticwebsite";
         if(blobName === "../")
         {
-            link = "/"
+            link += "/index.html"
         }
         else if(blobName.slice(-1) === "/")
         {
             link = "?prefix=" + blobName
         } else {
-            link = "/" + blobName
+            link += "/" + blobName
         }
         return (
             <a href={link}>
