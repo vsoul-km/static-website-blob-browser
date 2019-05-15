@@ -48,11 +48,17 @@ Follow the following steps to quick deploy the sample to any contianer in your A
 - Download [Full Package](https://github.com/msdz/static-website-blob-browser/blob/master/static-website-blob-browser.zip)
 - Using any txt editor to open **static\js** 
 - Go to line 56 change the Account Name to your own
-`"mscssstatic", // Change account name`
+```
+"mscssstatic", // Change account name
+```
 - Go to line 61 change the Container Name to your own
-`s = w.a.fromServiceURL(r, "static"), // Change container name`
+```
+s = w.a.fromServiceURL(r, "static"), // Change container name
+```
 - Go to line 122 change the full container URL to your own
-`"https://mscssstatic.blob.core.windows.net/static";`
+```
+"https://mscssstatic.blob.core.windows.net/static";
+```
 - Go to line 183 to change default page size.
 - Upload the package to your container
 
