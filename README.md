@@ -49,7 +49,7 @@ Once you have deployed, configure the container as public, and set the CORS sett
   * Allowed headers and exposed headers: *
 - Go to Blobs menu
 - Click on the `...` next to the desired blob container (in the sample, $web is used)
-- Click on `Access Policy` and configure `Public Access for the Container`. This is required for anonymously listing blobs using the SDK.
+- Click on `Change access level` and configure `Container (anonymous read access for containers and blobs)`. This is required for anonymously listing blobs using the SDK.
 - Go to storage account → Access Control IAM → Role Assignments → Add (role assignment) → Storage Blob Data Owner → Members → Select Members → Start writing the name of your storage account and then select service application subscription user (like SomeName-ee7d8ff34-1d38-4c50-9ea6-ae07586ad769) → Assign
 
 ![Blob browser - Static website](https://raw.githubusercontent.com/seguler/static-website-blob-browser/master/staticwebsitedemo.jpg)
