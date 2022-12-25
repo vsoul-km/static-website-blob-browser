@@ -44,7 +44,7 @@ Follow the following steps to deploy the sample on your Azure Storage account. O
 Once you have deployed, configure the container as public, and set the CORS settings to allow access from the static website endpoint.
 - Go to Azure Portal, select your storage account
 - Click CORS on the menu. And add a new row
-  * Allowed origin: https://staticwebsitedemo.z20.web.core.windows.net (your static website endpoint) *Note: in CORS there is needed to use static web site link without a slash / at the and of the url (go to storage account → static website to detect static web site name)
+  * Allowed origin: https://staticwebsitedemo.z20.web.core.windows.net (your static website primary endpoint) *Note: in CORS there is needed to use static web site link without a slash / at the and of the url (go to storage account → static website to detect static web site primary endpoint)
   * Allowed methods: GET, OPTIONS, HEAD
   * Allowed headers and exposed headers: *
 - Go to Blobs menu
